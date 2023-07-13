@@ -1,0 +1,20 @@
+i{
+    color: white;
+    cursor: pointer;
+}
+.NavLinks{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    float: left;
+    margin-right: 1cm;
+}
+.switch{
+    margin-left: 1cm;
+    margin-top: 3px;
+    margin-right: 3px;
+    float: left;
+    /* display: inline-block; */
+
+}
+
