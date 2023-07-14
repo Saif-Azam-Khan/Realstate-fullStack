@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Card from "react-bootstrap/Card";
-import { ADD } from "../redux/actions/action";
+// import { ADD } from "../redux/actions/action";
 import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux/es/exports";
 
 
-const BASE_URL = "http://localhost:8080";
+// const BASE_URL = "http://localhost:8080";
 
 function Cards() {
   const datas = useSelector((state) => state.cartreducer.details);
@@ -117,11 +117,11 @@ function Cards() {
     setFilters("belowFlat");
   };
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const send = (e) => {
-    dispatch(ADD(e));
-  };
+  // const send = (e) => {
+  //   dispatch(ADD(e));
+  // };
 
   return (
     <div className="container mt-3">
@@ -184,7 +184,7 @@ function Cards() {
       <br></br>
       <h2 className="text-center">Add to Cart Projects</h2>
       <div className="row d-flex justify-content-center align-items-center">
-        {filters == "above"
+        {filters === "above"
           ? aboves.map((element) => {
               return (
                 <>
@@ -208,7 +208,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "below"
+          : filters === "below"
           ? belows.map((element) => {
               return (
                 <>
@@ -232,7 +232,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "flats"
+          : filters === "flats"
           ? flats.map((element) => {
               return (
                 <>
@@ -256,7 +256,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "belowFlat"
+          : filters === "belowFlat"
           ? belowFlat.map((element) => {
               return (
                 <>
@@ -280,7 +280,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "aboveFlat"
+          : filters === "aboveFlat"
           ? aboveFlat.map((element) => {
               return (
                 <>
@@ -304,7 +304,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "bunglows"
+          : filters === "bunglows"
           ? bunglows.map((element) => {
               return (
                 <>
@@ -328,7 +328,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "aboveBunglows"
+          : filters === "aboveBunglows"
           ? aboveBunglow.map((element) => {
               return (
                 <>
@@ -352,7 +352,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "belowBunglow"
+          : filters === "belowBunglow"
           ? belowBunglow.map((element) => {
               return (
                 <>
@@ -376,7 +376,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "residentials"
+          : filters === "residentials"
           ? residentials.map((element) => {
               return (
                 <>
@@ -400,7 +400,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "belowLand"
+          : filters === "belowLand"
           ? belowLand.map((element) => {
               return (
                 <>
@@ -424,7 +424,7 @@ function Cards() {
                 </>
               );
             })
-          : filters == "aboveLand"
+          : filters === "aboveLand"
           ? aboveLand.map((element) => {
               return (
                 <>
